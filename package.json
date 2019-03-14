@@ -1,5 +1,5 @@
 {
-  "name": "agency",
+  "name": "travel-site",
   "version": "1.0.0",
   "dependencies": {
     "jquery": "3.2.1",
@@ -10,13 +10,15 @@
     "waypoints": "4.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "autoprefixer": "7.1.6",
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
+    "babel-core": "^7.0.0-beta.3",
+    "babel-loader": "^8.0.0-beta.6",
     "babel-preset-es2015": "6.24.1",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "2.18.13",
     "del": "3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "3.9.1",
     "gulp-cssnano": "2.1.2",
     "gulp-imagemin": "4.0.0",
     "gulp-modernizr": "1.0.0-alpha",
@@ -33,6 +35,11 @@
     "postcss-mixins": "6.2.0",
     "postcss-nested": "2.1.2",
     "postcss-simple-vars": "4.1.0",
-    "webpack": "3.8.1"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+    "build": "webpack --progress --colors",
+    "start": "webpack-dev-server --progress --colors"
   }
 }
