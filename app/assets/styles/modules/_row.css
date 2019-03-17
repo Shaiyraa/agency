@@ -1,121 +1,124 @@
 .row {
 
-	@mixin clearfix;
+  @mixin clearfix;
 
-	&--t-padding {
-		padding-top: 80px;
-	}
+  &--t-padding {
+    padding-top: 80px;
+  }
 
-	&__b-margin-until-medium {
-		margin-bottom: 1rem;
-	}
+  &--gutters {
+    margin-right: -65px;
+  }
 
-	@mixin Medium{
-		&__b-margin-until-medium {
-		margin-bottom: 0;
-		}
+  &--gutters-large {
+    margin-right: -100px;
+  }
 
-		&__medium-4 {
-		float: left;
-		width: 33.33%;
-		}
+  &--gutters-small {
+    margin-right: -45px;
+  }
 
-		&__medium-4--larger {
-		float: left;
-		width: 37%;
-		}
+  &--gutters > div {
+    padding-right: 65px;
+  }
 
-		&__medium-8 {
-		float: left;
-		width: 66.66%;
-		}
+  &--gutters-large > div {
+    padding-right: 100px;
+  }
 
-		&__medium-8--smaller {
-		float: left;
-		width: 63%;
-		}
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
 
-		&__medium-6 {
-			float: left;
-			width: 50%;
-		}
-	}
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
 
-		@mixin Large{
-		&__b-margin-until-large {
-		margin-bottom: 0;
-		}
+  @mixin atMedium {
 
-		&__large-4 {
-		float: left;
-		width: 33.33%;
-		}
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
 
-		&__large-4--larger {
-		float: left;
-		width: 37%;
-		}
+    &__medium-4 {
+      float: left;
+      width: 33.33%;
+    }
 
-		&__large-8 {
-		float: left;
-		width: 66.66%;
-		}
+    &__medium-4--larger {
+      width: 37%;
+    }
 
-		&__large-8--smaller {
-		float: left;
-		width: 63%;
-		}
+    &__medium-6 {
+      float: left;
+      width: 50%;
+    }
 
-		&__large-6 {
-			float: left;
-			width: 50%;
-		}
-	}
-	
+    &__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
 
-	&--gutters {
-		margin-right: -65px;
-	}
+    &__medium-8--smaller {
+      width: 63%;
+    }
 
-	&--gutters-large {
-		margin-right: -100px;
-	}
+  }
 
-	&--gutters-small {
-		margin-right: -45px;
-	}
+  @mixin atLarge {
 
-	&--gutters > div {
-		padding-right: 65px;
-	}
+    &__b-margin-until-large {
+      margin-bottom: 0;
+    }
 
-	&--gutters-large > div {
-		padding-right: 100px;
-	}
+    &__large-4 {
+      float: left;
+      width: 33.33%;
+    }
 
-	&--gutters-small > div {
-		padding-right: 45px;
-	}
-	/* begin equal height rules */
-	&--equal-height-at-medium {
-		@mixin Medium {
-			display: flex;
-		}
+    &__large-4--larger {
+      width: 37%;
+    }
 
-		& > div {
-			float: none;
-			display: flex;
-		}
-	}
+    &__large-6 {
+      float: left;
+      width: 50%;
+    }
 
-	&--equal-height-at-large {
-		@mixin Large {
-			display: flex;
-		}
+    &__large-8 {
+      float: left;
+      width: 66.66%;
+    }
 
-		& > div {
-			float: none;
-			display: flex;
-		}
-	}
+    &__large-8--smaller {
+      width: 63%;
+    }
+
+  }
+  
+  /* Begin Equal Height Rules */
+  &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+
+  }
+
+  &--equal-height-at-large {
+    @mixin atLarge {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+
+  }
+
 }
